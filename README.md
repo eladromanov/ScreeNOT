@@ -8,7 +8,7 @@ If you use this package, please cite our paper:
 "ScreeNot: Exact mse-optimal singular value thresholding in correlated noise." 
 arXiv preprint arXiv:2009.12297 (2020).
 
-**TODO: Change reference to accepted version after appearance.**
+**TODO: Paper accepted to the Annals of Statistics. Update reference when in press.**
 
 
 ## Installing this package
