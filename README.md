@@ -8,24 +8,26 @@ If you use this package, please cite our paper:
 "ScreeNot: Exact mse-optimal singular value thresholding in correlated noise." 
 arXiv preprint arXiv:2009.12297 (2020).
 
-**TODO: Change reference to accepted version after appearance.**
+**TODO: Paper accepted to the Annals of Statistics. Update reference when in press.**
 
 
 ## Installing this package
-ScreeNOT is available for Python (via PyPI), R (via CRAN) and Matlab (soure available on MatlabCentral).
-Additionally, source code can either be downloaded directly from this repository; and also permanently deposited at: https://purl.stanford.edu/py196rk3919
+ScreeNOT is available for Python (source code or package via PyPI), R (source code or package via CRAN) and Matlab (source code only).
+Source code can be downloaded directly from this repository. It is also permanently deposited at: https://purl.stanford.edu/py196rk3919
 
 ### Python:
 
-**TODO**
+* Source code:  ./Python/src/screenot/ScreeNOT.py .
+* PyPI: **TODO**
 
 ### R:
 
-**TODO**
+* Source code: **TODO**
+* CRAN: **TODO**
 
 ### Matlab:
 
-**TODO**
+* Source code: ./Matlab/ScreeNOT.m
 
 ## Usage
 
@@ -39,8 +41,8 @@ The function returns three values:
 
 `Xest`: a matrix with same dimensions as `Y`; an estimator for the low-rank signal (the result of performing thresholding on the singular values of `Y`).
 `Topt`: the hard threshold which was used; computed adaptively from the singular values of `Y`.
-`r`: the number of "relevant"/"strong" components of the signal: r=rank(Xest).
+`r`: the number of "relevant"/"strong" components of the signal: `r=rank(Xest)`.
 
 ## Example
 
-For usage example in python, please consult the jupyter notebook "ScreeNOTExample.ipynb"
+For usage example in `Python`, please consult the jupyter notebook "ScreeNOTExample.ipynb" in this repo.
