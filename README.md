@@ -12,20 +12,22 @@ arXiv preprint arXiv:2009.12297 (2020).
 
 
 ## Installing this package
-ScreeNOT is available for Python (via PyPI), R (via CRAN) and Matlab (soure available on MatlabCentral).
-Additionally, source code can either be downloaded directly from this repository; and also permanently deposited at: https://purl.stanford.edu/py196rk3919
+ScreeNOT is available for Python (source code or package via PyPI), R (source code or package via CRAN) and Matlab (source code only).
+Source code can be downloaded directly from this repository. It is also permanently deposited at: https://purl.stanford.edu/py196rk3919
 
 ### Python:
 
-**TODO**
+* Source code:  ./Python/src/screenot/OptimalAdaptiveSVThreshold.py .
+* PyPI: **TODO**
 
 ### R:
 
-**TODO**
+* Source code: **TODO**
+* CRAN: **TODO**
 
 ### Matlab:
 
-**TODO**
+* Source code: ./Matlab/ScreeNOT.m
 
 ## Usage
 
@@ -43,4 +45,4 @@ The function returns three values:
 
 ## Example
 
-For usage example in python, please consult the jupyter notebook "ScreeNOTExample.ipynb"
+For usage example in `Python`, please consult the jupyter notebook "ScreeNOTExample.ipynb" in this repo.
