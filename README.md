@@ -41,7 +41,7 @@ The function returns three values:
 
 `Xest`: a matrix with same dimensions as `Y`; an estimator for the low-rank signal (the result of performing thresholding on the singular values of `Y`).
 `Topt`: the hard threshold which was used; computed adaptively from the singular values of `Y`.
-`r`: the number of "relevant"/"strong" components of the signal: r=rank(Xest).
+`r`: the number of "relevant"/"strong" components of the signal: `r=rank(Xest)`.
 
 ## Example
 
