@@ -3,16 +3,9 @@
 # on its input; from a user's perspecive, it is the main (only) API for this
 # code package.
 # 
-# ``ScreeNOT : Exact MSE-Optimal Singular Value Thresholding in Correlated Noise ''
-# by David L. Donoho, Matan Gavish, Elad Romanov. arxiv:2009.12297
-# 
-# Cite this as: 
-# Donoho, David L., Gavish, Matan and Romanov, Elad. (2020). Code Supplement for "ScreeNOT: Exact MSE-Optimal Singular Value Thresholding in Correlated Noise". Stanford Digital Repository. https://arxiv.org/abs/2009.12297
-# 
-# 
 # MIT License
 # 
-# Copyright (c) 2020 David L. Donoho, Matan Gavish, Elad Romanov
+# Copyright (c) 2020 Elad Romanov
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
