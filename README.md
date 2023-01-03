@@ -5,7 +5,7 @@ ScreeNOT is proposed to practitioners as a mathematically solid alternative to C
 
 If you use this package, please cite our paper:
 * David L. Donoho, Matan Gavish, and Elad Romanov. 
-"ScreeNot: Exact mse-optimal singular value thresholding in correlated noise." 
+"ScreeNot: Exact MSE-optimal singular value thresholding in correlated noise." 
 arXiv preprint arXiv:2009.12297 (2020).
 
 **TODO: Paper accepted for publication in the Annals of Statistics. This reference will be updated once it appears.**
