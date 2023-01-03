@@ -1,14 +1,14 @@
 # *ScreeNOT*: Optimal Singular Value Thresholding in Correlated Noise
 
-ScreeNOT is a code library for hard thresholding of singular values. The procedure adaptively estimates the best singular value threshold under unknown noise characteristics. The threshold chosen by ScreeNOT is optimal (asymptotically, in the sense of minimum Frobenius error) under the the so-called "Spiked model" of a low-rank matrix observed in additive noise. In contrast to previous works, the noise is *not* assumed to be i.i.d. or white; it can have an essentially and **unknown** correlation structure, across either rows, columns or both. 
+ScreeNOT is a code library for hard thresholding of singular values. The procedure adaptively estimates the best singular value threshold under unknown noise characteristics. The threshold chosen by ScreeNOT is optimal (asymptotically, in the sense of minimum Frobenius error) under the the so-called "Spiked model" of a low-rank matrix observed in additive noise. In contrast to previous works, the noise is *not* assumed to be i.i.d. or white; it can have an essentially arbitrary and **unknown** correlation structure, across either rows, columns or both. 
 ScreeNOT is proposed to practitioners as a mathematically solid alternative to Cattell's ever-popular but vague Scree Plot heuristic from 1966.
 
 If you use this package, please cite our paper:
 * David L. Donoho, Matan Gavish, and Elad Romanov. 
-"ScreeNot: Exact mse-optimal singular value thresholding in correlated noise." 
+"ScreeNot: Exact MSE-optimal singular value thresholding in correlated noise." 
 arXiv preprint arXiv:2009.12297 (2020).
 
-**TODO: Paper accepted to the Annals of Statistics. Update reference when in press.**
+**TODO: Paper accepted for publication in the Annals of Statistics. This reference will be updated once it appears.**
 
 
 ## Installing this package
