@@ -17,13 +17,13 @@ Source code can be downloaded directly from this repository. It is also permanen
 
 ### Python:
 
-* Source code:  ./Python/src/screenot/ScreeNOT.py .
-* PyPI: **TODO**
+* PyPI: `pip install screenot`   (package: https://pypi.org/project/screenot/)
+* Source code:  ./Python/src/screenot/ScreeNOT.py
 
 ### R:
 
-* Source code: **TODO**
-* CRAN: **TODO**
+* CRAN: *To be updated soon!*
+* Source code: ./R/ScreeNOT.R
 
 ### Matlab:
 
