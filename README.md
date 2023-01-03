@@ -13,7 +13,7 @@ arXiv preprint arXiv:2009.12297 (2020).
 
 ## Installing this package
 ScreeNOT is available for Python (source code or package via PyPI), R (source code or package via CRAN) and Matlab (source code only).
-Source code can be downloaded directly from this repository. It is also permanently deposited at: https://purl.stanford.edu/py196rk3919
+Source code can be downloaded directly from this repository. It is also permanently deposited at the Stanford Digital Repository: https://purl.stanford.edu/py196rk3919
 
 ### Python:
 
