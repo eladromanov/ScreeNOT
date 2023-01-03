@@ -17,7 +17,7 @@ Source code can be downloaded directly from this repository. It is also permanen
 
 ### Python:
 
-* Source code:  ./Python/src/screenot/OptimalAdaptiveSVThreshold.py .
+* Source code:  ./Python/src/screenot/ScreeNOT.py .
 * PyPI: **TODO**
 
 ### R:
