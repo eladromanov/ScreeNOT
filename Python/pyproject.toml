@@ -1,0 +1,20 @@
+[project]
+name = "screenot"
+version = "0.0.1"
+authors = [
+  { name="Elad Romanov", email="elad.romanov@gmail.com" },
+]
+description = "Code package for ScreeNOT: Exact MSE-Optimal Singular Value Thresholding in Correlated Noise"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/eladromanov/ScreeNOT"
+"Bug Tracker" = "https://github.com/eladromanov/ScreeNOT/issues"
+
+[build-system]
+requires = ["hatchling", "numpy"]
+build-backend = "hatchling.build"
