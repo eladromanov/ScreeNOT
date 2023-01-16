@@ -20,16 +20,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-#' Performs optimal adaptive hard thresholding on the input matrix Y.
-#' @param Y: A data matrix, on whose singular values thresholding should be performed.
-#' @param k: An upper bound (potentially loose) on the latent signal rank. That
+#' Adaptive hard thresholding
+#' @description Performs optimal adaptive hard thresholding on the input matrix Y.
+#' @param Y A data matrix, on whose singular values thresholding should be performed.
+#' @param k An upper bound (potentially loose) on the latent signal rank. That
 #'    is, the procedure assumes that there are AT MOST k informative principal
 #'    components of Y.
-#' @param strategy: Method for reconstructing the noise bulk (optional).
-#'    Can be one of the following:
-#'    \item{'0'}{tranpsort to zero}
-#'    \item{'w'}{winsorization}
-#'    \item{'i'}{imputation (default option)}
+#' @param strategy Method for reconstructing the noise bulk (optional). Can be one of the following:
+#'    '0': tranpsort to zero;
+#'    'w': winsorization;
+#'    'i': imputation (default option).
 #' @return
 #'    \item{Xest}{An estimate of the low-rank signal. That is: the matrix obtained
 #'          by thresholding the singular values of Y.}
@@ -38,10 +38,19 @@
 #'        satisfies y_i > Topt.}
 #'    \item{r}{The number of "relevant" components: r = rank(Xest).}
 #' @references David L. Donoho, Matan Gavish and Elad Romanov.
-#'        "ScreeNot: Exact MSE-optimal singular value thresholding in correlated noise."
+#'        "ScreeNOT: Exact MSE-optimal singular value thresholding in correlated noise."
 #'        Annals of Statistics (2023).
 #'        \url{https://github.com/eladromanov/ScreeNOT}
 #' @author Elad Romanov
+#' @examples
+#'    Y <- matrix(rnorm(1e6)/sqrt(1e3),nrow=1e3)
+#'         # Y is a 1000x1000 i.i.d. Gaussian matrix
+#'    val <- ScreeNOT::adaptiveHardThresholding(Y, 10)
+#'         # Runs the ScreeNOT procedure, with an upper bound k=10
+#'    cat('Computed threshold: ', val$Topt)
+#'         # The adaptively computed threshold
+#'    cat('Known optimal threshold: ', 4/sqrt(3))
+#'         # The known optimal threshold for this noise bulk
 #' @export
 adaptiveHardThresholding = function(Y, k, strategy='i') {
   Y_svd <- svd(Y)
@@ -64,9 +73,9 @@ adaptiveHardThresholding = function(Y, k, strategy='i') {
 
 #' Creates a "pseudo-noise" singular from the singular values of the observed matrix
 #' Y, which is given in the array fY.
-#' @param fY: a numpy array containing the observed singular values, one which we operate
-#' @param k: k: an upper bound on the signal rank. The leading k values in fY are discarded
-#' @param strategy: strategy: one of '0' (tranpsort to zero), 'w' (winsorization), 'i' (imputation)
+#' @param fY a numpy array containing the observed singular values, one which we operate
+#' @param k k: an upper bound on the signal rank. The leading k values in fY are discarded
+#' @param strategy strategy: one of '0' (tranpsort to zero), 'w' (winsorization), 'i' (imputation)
 #'      default='i'    r: the number of relevant components, r = rank(Xest)
 #' @noRd
 createPseudoNoise = function(fY, k, strategy='i') {
@@ -112,8 +121,8 @@ createPseudoNoise = function(fY, k, strategy='i') {
 #' Computes the optimal hard thershold for a given (empirical) noise distribution fZ
 #' and shape parameter gamma. The optimal threshold t* is the unique number satisfying
 #' F_gamma(t*;fZ)=-4 .
-#' @param fZ: array, whose entries define the counting measure to use
-#' @param gamma: dim parameter, assumed 0 < gamma <= 1.
+#' @param fZ array, whose entries define the counting measure to use
+#' @param gamma dim parameter, assumed 0 < gamma <= 1.
 #' @noRd
 computeOptThreshold = function(fZ, gamma) {
   low <- max(fZ)
@@ -140,8 +149,8 @@ computeOptThreshold = function(fZ, gamma) {
 
 #' Compute the functional Phi(y;fZ), evaluated at y and counting (discrete) measure
 #' defined by the entries of fZ.
-#' @param  y: values to evaluate at
-#' @param fZ: array, whose entries define the counting measure to use
+#' @param  y values to evaluate at
+#' @param fZ array, whose entries define the counting measure to use
 #' @noRd
 Phi = function(y, fZ) {
   phi <- mean(y/(y**2 - fZ**2))
@@ -161,9 +170,9 @@ Phid = function(y, fZ) {
 
 #' Compute the functional D_gamma(y;fZ), evaluated at y and counting (discrete)
 #' measure defined by the entries of fZ, with shape parameter gamma.
-#' @param y: values to evaluate at
-#' @param fZ: numpy array, whose entries define the counting measure to use
-#' @param gamma: shape parameter, assumed 0 < gamma <= 1.
+#' @param y values to evaluate at
+#' @param fZ numpy array, whose entries define the counting measure to use
+#' @param gamma shape parameter, assumed 0 < gamma <= 1.
 #' @noRd
 D = function(y, fZ, gamma) {
   phi <- Phi(y, fZ)
@@ -173,9 +182,9 @@ D = function(y, fZ, gamma) {
 #' Compute the functional D_gamma'(y;fZ) (derivative of D_gamma w.r.t y),
 #' evaluated at y and counting (discrete) measure defined by the entries of fZ,
 #' with shape parameter gamma.
-#' @param y: values to evaluate at
-#' @param fZ: numpy array, whose entries define the counting measure to use
-#' @param gamma: shape parameter, assumed 0 < gamma <= 1.
+#' @param y values to evaluate at
+#' @param fZ numpy array, whose entries define the counting measure to use
+#' @param gamma shape parameter, assumed 0 < gamma <= 1.
 #' @noRd
 Dd = function(y, fZ, gamma) {
   phi <- Phi(y, fZ)
@@ -185,9 +194,9 @@ Dd = function(y, fZ, gamma) {
 
 #' Compute the functional Psi_gamma(y;fZ), evaluated at y and counting (discrete)
 #' measure defined by the entries of fZ, with shape parameter gamma.
-#' @param y: values to evaluate at
-#' @param fZ: numpy array, whose entries define the counting measure to use
-#' @param strategy: gamma: shape parameter, assumed 0 < gamma <= 1.
+#' @param y values to evaluate at
+#' @param fZ numpy array, whose entries define the counting measure to use
+#' @param strategy gamma: shape parameter, assumed 0 < gamma <= 1.
 #' @noRd
 F = function(y, fZ, gamma) {
   d <- D(y, fZ, gamma)
