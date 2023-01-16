@@ -1,0 +1,12 @@
+Package: ScreeNOT
+Type: Package
+Title: ScreeNOT
+Version: 0.1.0
+Author: Elad Romanov
+Maintainer: Elad Romanov <elad.romanov@gmail.com>
+Description: ScreeNOT is a code library for hard thresholding of singular values. The procedure adaptively estimates the best singular value threshold under unknown noise characteristics. The threshold chosen by ScreeNOT is optimal (asymptotically, in the sense of minimum Frobenius error) under the the so-called "Spiked model" of a low-rank matrix observed in additive noise. In contrast to previous works, the noise is not assumed to be i.i.d. or white; it can have an essentially arbitrary and unknown correlation structure, across either rows, columns or both. ScreeNOT is proposed to practitioners as a mathematically solid alternative to Cattell's ever-popular but vague Scree Plot heuristic from 1966. 
+    If you use this package, please cite out paper: David L. Donoho, Matan Gavish and Elad Romanov. "ScreeNOT: Exact MSE-optimal singular value thresholding in correlated noise." Annals of Statistics (2023).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
