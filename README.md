@@ -5,11 +5,7 @@ ScreeNOT is proposed to practitioners as a mathematically solid alternative to C
 
 If you use this package, please cite our paper:
 * David L. Donoho, Matan Gavish, and Elad Romanov. 
-"ScreeNot: Exact MSE-optimal singular value thresholding in correlated noise." 
-arXiv preprint arXiv:2009.12297 (2020).
-
-**TODO: Paper accepted for publication in the Annals of Statistics. This reference will be updated once it appears.**
-
+"ScreeNot: Exact MSE-optimal singular value thresholding in correlated noise." Annals of Statistics (2023)
 
 ## Installing this package
 ScreeNOT is available for Python (source code or package via PyPI), R (source code or package via CRAN) and Matlab (source code only).
@@ -23,7 +19,7 @@ Source code can be downloaded directly from this repository. It is also permanen
 ### R:
 
 * CRAN: *To be updated soon!*
-* Source code: ./R/ScreeNOT.R
+* Source code: ./R/src/ScreeNOT.R
 
 ### Matlab:
 
